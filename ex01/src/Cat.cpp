@@ -3,22 +3,25 @@
 Cat::Cat()
 {
 	_type = "Cat";
+	_brain = new Brain();
 	std::cout << BLUE << "Constructor Cat called" << RESET << std::endl;
 }
 
 Cat::~Cat()
 {
+	delete _brain;
 	std::cout << BLUE << "Destructor Cat called" << RESET << std::endl;
 }
 
 Cat::Cat(const Cat &src) : Animal(src)
 {
 	std::cout << BLUE << "Copy constructor Cat called" << RESET << std::endl;
+	_brain = new Brain(*src._brain);
 }
 
 Cat &Cat::operator=(const Cat &rhs)
 {
-	std::cout << BLUE << "Operator Cat called" << RESET <<  std::endl;
+	std::cout << BLUE << "Operator Cat called" << RESET << std::endl;
 	if (this != &rhs)
         Animal::operator=(rhs);
     return *this;
@@ -26,5 +29,9 @@ Cat &Cat::operator=(const Cat &rhs)
 
 void Cat::makeSound() const
 {
-	std::cout << BLUE << _type << " say Miaouu!" << RESET << std::endl;
+	std::cout << BLUE << _type << " say Miaouu!"  << RESET << std::endl;
+}
+Brain* Cat::getBrain() const
+{
+    return _brain;
 }
