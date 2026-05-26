@@ -1,7 +1,6 @@
 #ifndef WRONG_WrongCAT_HPP
 #define WRONG_WrongCAT_HPP
 
-#define RESET   "\033[0m"
 #define GREY    "\033[38;5;245m"
 
 #include "WrongAnimal.hpp"

@@ -2,9 +2,9 @@
 #define BRAIN_HPP
 
 #define PINK    "\033[38;5;198m"
-#define RESET   "\033[0m"
 
-#include <iostream>
+#include "AAnimal.hpp"
+
 class Brain
 {
 	protected :

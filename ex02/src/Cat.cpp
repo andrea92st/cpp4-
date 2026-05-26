@@ -23,7 +23,11 @@ Cat &Cat::operator=(const Cat &rhs)
 {
 	std::cout << BLUE << "Operator Cat called" << RESET << std::endl;
 	if (this != &rhs)
+    {
         AAnimal::operator=(rhs);
+        delete _brain;
+        _brain = new Brain(*rhs._brain);
+    }
     return *this;
 }
 

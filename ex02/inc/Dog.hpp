@@ -2,7 +2,6 @@
 #define DOG_HPP
 
 #define RED    "\033[35m"
-#define RESET   "\033[0m"
 
 #include "AAnimal.hpp"
 #include "Brain.hpp"

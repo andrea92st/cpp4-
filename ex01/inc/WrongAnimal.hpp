@@ -2,9 +2,9 @@
 #define WRONG_WrongANIMAL_HPP
 
 #define YELLOW  "\033[33m"
-#define RESET   "\033[0m"
 
-#include <iostream>
+#include "Animal.hpp"
+
 
 class WrongAnimal{
 

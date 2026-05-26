@@ -2,7 +2,6 @@
 #define CAT_HPP
 
 #define BLUE    "\033[36m"
-#define RESET   "\033[0m"
 
 #include "AAnimal.hpp"
 #include "Brain.hpp"
